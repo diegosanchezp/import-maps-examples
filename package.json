@@ -1,0 +1,35 @@
+{
+  "name": "import-maps-examples",
+  "version": "1.0.0",
+  "description": "Examples of import-maps usage.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegosanchezp/import-maps-examples.git"
+  },
+  "keywords": [
+    "import-maps",
+    "web",
+    "technology",
+    "front-end",
+    "development"
+  ],
+  "author": "Diego Sánchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegosanchezp/import-maps-examples/issues"
+  },
+  "homepage": "https://github.com/diegosanchezp/import-maps-examples#readme",
+  "devDependencies": {
+    "@import-maps/generate": "^0.2.6",
+    "es-dev-server": "^1.57.2",
+    "snowpack": "^2.7.7"
+  },
+  "dependencies": {
+    "es-module-shims": "^0.5.2",
+    "lit-element": "^2.3.1"
+  }
+}
