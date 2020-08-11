@@ -1,0 +1,49 @@
+<!-- chrome.html -->
+<!-- WARNING: This example only works with google chrome browser with Experimental Productivity Features -->
+<html>
+  <head>
+    <title>Import Maps Google Chrome</title>
+    <!-- Include the polyfill -->
+    <script defer src="./node_modules/es-module-shims/dist/es-module-shims.min.js"></script>
+
+    <!-- Declare the import map wich is a json object that starts with the key "imports". 
+    This is an object that contains the mapping of the import URLs to the node_modules folder -->
+
+    <script type="importmap">
+      {
+        "imports": {
+          "lit-html": "./node_modules/lit-html/lit-html.js",
+          "lit-element": "./node_modules/lit-element/lit-element.js",
+          "lit-html/lit-html.js": "./node_modules/lit-html/lit-html.js",
+          "lit-html/lib/shady-render.js": "./node_modules/lit-html/lib/shady-render.js"
+        }
+      }
+    </script>
+
+    <!-- JavaScript code that uses bare module syntax -->
+    <script type="module">
+
+      import { LitElement, html, css } from 'lit-element';
+
+      class CustomBtn extends LitElement {
+        static get styles() {
+          return css`
+            button {
+              color: blue;
+            }
+          `;
+        }
+
+        render() {
+          return html`
+            <button>Custom Button</button>
+          `;
+        }
+      }
+      customElements.define('custom-button', CustomBtn);
+    </script>
+  </head>
+  <body>
+    <custom-button></custom-button>
+  </body>
+</html>

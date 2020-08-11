@@ -4,7 +4,8 @@
   "description": "Examples of import-maps usage.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve-index": "es-dev-server --app-index index.html --watch --open",
+    "serve-chrome": "es-dev-server --app-index chrome.html --watch"
   },
   "repository": {
     "type": "git",
