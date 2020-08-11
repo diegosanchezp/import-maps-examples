@@ -5,8 +5,11 @@
   "main": "main.js",
   "scripts": {
     "serve-index": "es-dev-server --app-index index.html --watch --open",
-    "serve-chrome": "es-dev-server --app-index chrome.html --watch"
+    "serve-chrome": "es-dev-server --app-index chrome.html --watch",
+    "serve-generated": "es-dev-server --app-index generatedImportMap.html --watch --open",
+    "postinstall": "generate-import-map"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/diegosanchezp/import-maps-examples.git"
@@ -32,5 +35,20 @@
   "dependencies": {
     "es-module-shims": "^0.5.2",
     "lit-element": "^2.3.1"
+  },
+  "importMap": {
+    "overrides": {
+      "imports": {
+        "es-module-shims": ["", ""]
+      }
+    },
+    "deletions": {
+      "imports": [
+        "es-module-shims"
+      ]
+    },
+    "resolutions": {
+      "es-module-shims": "0.5.2"
+    }
   }
 }

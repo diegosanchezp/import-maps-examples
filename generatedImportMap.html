@@ -1,0 +1,39 @@
+<!-- generatedImportMap.html -->
+<!-- Example corresponding to the Generating import maps section -->
+<html>
+  <head>
+    <title>ES Import Maps Shim</title>
+    <!-- Include the polyfill -->
+    <script defer src="./node_modules/es-module-shims/dist/es-module-shims.min.js"></script>
+
+
+    <!-- Generated import map -->
+    <script type="importmap-shim" src="import-map.json"></script>
+
+    <!-- JavaScript code that uses bare module syntax -->
+    <script type="module-shim">
+
+      import { LitElement, html, css } from 'lit-element';
+
+      class CustomBtn extends LitElement {
+        static get styles() {
+          return css`
+            button {
+              color: blue;
+            }
+          `;
+        }
+
+        render() {
+          return html`
+            <button>Custom Button</button>
+          `;
+        }
+      }
+      customElements.define('custom-button', CustomBtn);
+    </script>
+  </head>
+  <body>
+    <custom-button></custom-button>
+  </body>
+</html>
