@@ -7,9 +7,9 @@
     "serve-index": "es-dev-server --app-index index.html --watch --open",
     "serve-chrome": "es-dev-server --app-index chrome.html --watch",
     "serve-generated": "es-dev-server --app-index generatedImportMap.html --watch --open",
-    "postinstall": "generate-import-map"
+    "postinstall": "generate-import-map",
+    "serve-snowpack": "es-dev-server --app-index snowpack.html --watch --open"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/diegosanchezp/import-maps-examples.git"
@@ -33,20 +33,11 @@
     "snowpack": "^2.7.7"
   },
   "dependencies": {
+    "@polymer/paper-button": "^3.0.1",
     "es-module-shims": "^0.5.2",
     "lit-element": "^2.3.1"
   },
   "importMap": {
-    "overrides": {
-      "imports": {
-        "es-module-shims": ["", ""]
-      }
-    },
-    "deletions": {
-      "imports": [
-        "es-module-shims"
-      ]
-    },
     "resolutions": {
       "es-module-shims": "0.5.2"
     }
