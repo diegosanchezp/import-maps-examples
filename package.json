@@ -29,13 +29,18 @@
   "homepage": "https://github.com/diegosanchezp/import-maps-examples#readme",
   "devDependencies": {
     "@import-maps/generate": "^0.2.6",
+    "@polymer/paper-button": "^3.0.1",
     "es-dev-server": "^1.57.2",
     "snowpack": "^2.7.7"
   },
   "dependencies": {
-    "@polymer/paper-button": "^3.0.1",
     "es-module-shims": "^0.5.2",
     "lit-element": "^2.3.1"
+  },
+  "snowpack": {
+    "install": [
+      "@polymer/paper-button/paper-button.js"
+    ]
   },
   "importMap": {
     "resolutions": {
