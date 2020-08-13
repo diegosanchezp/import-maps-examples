@@ -1,6 +1,6 @@
 # Import Maps Examples
 
-Simple examples of [import maps](https://github.com/WICG/import-maps) using the polyfill [es-module-shims](https://github.com/guybedford/es-module-shims). These examples come from the [blog post](https://diegosanchezp.github.io/blog), visit for better explanation.
+Simple examples of [import maps](https://github.com/WICG/import-maps) using the polyfill [es-module-shims](https://github.com/guybedford/es-module-shims). These examples come from the [blog post](https://diegosanchezp.github.io/blog/import-maps), visit for better explanation.
 
 The purpose of these examples is try to use [lit-element](https://lit-element.polymer-project.org/guide/start) and [@polymer/paper-button](https://www.npmjs.com/package/@polymer/paper-button) with bare module specifiers in the browser without a bundler.
 
